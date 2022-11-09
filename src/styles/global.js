@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${theme.colors.black};
     color: white;
     font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
   };
 
   h1, h2 {

@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 export const Wrapper = styled.div`
   position: fixed;
   width: 100%;
+  z-index: 100;
 `;
 
 export const HeaderWrapper = styled.div`
@@ -18,8 +19,8 @@ export const HeaderWrapper = styled.div`
 export const NavBar = styled.div(
   ({ theme: { fontSize }}) => css`
     display: flex;
-    gap: 2.5rem;
-    font-size: ${fontSize.md};
+    gap: 4rem;
+    font-size: ${fontSize.sm};
   `,
 );
 

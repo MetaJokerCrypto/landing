@@ -9,14 +9,14 @@ const getAnimations = () => {
   let height = 0;
   let color = '';
 
-  for (let i = 0; i < 100; i++) {
-    top = Math.floor(Math.random() * (Math.random() < 0.5 ? -50 : 50));
-    left = Math.floor(Math.random() *(Math.random() < 0.5 ? -50 : 50));
+  for (let i = 0; i < 200; i++) {
+    top = Math.round(Math.random() * (Math.random() < 0.5 ? -50 : 50));
+    left = Math.round(Math.random() *(Math.random() < 0.5 ? -50 : 50));
     width = Math.floor(Math.random());
     height = Math.floor(Math.random());
     color =  colors[Math.floor(Math.random() * colors.length)];
 
-    if (i < 99) {
+    if (i < 199) {
       boxShadow += `${top}vw ${left}vh ${width}px ${height}px ${color}, `
     } else {
       boxShadow += `${top}vw ${left}vh ${width}px ${height}px ${color}`
