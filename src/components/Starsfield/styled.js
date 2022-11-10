@@ -29,17 +29,17 @@ const getAnimations = () => {
 
 export const Starfield = styled.div(
   ({ theme: { colors }}) => css`
-    overflow: hidden;
-    transform-origin: 50% 50%;
     position: fixed;
     top: 50%;
     left: 50%;
     height: 1px;
     width: 1px;
-    background-color: #fff;
+    overflow: hidden;
+    transform-origin: 50% 50%;
+    background-color: ${colors.black};
     border-radius: 50%;
     ${getAnimations()};
-    animation: zoom 10s alternate;
+    animation: zoom 4s alternate;
 
     @keyframes zoom {
       0% { opacity: 0; }

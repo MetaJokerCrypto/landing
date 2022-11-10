@@ -20,9 +20,8 @@ import {
   StarsImage,
   MainTextWrapper,
   RegularSection,
-  GoalSection,
   customButtonStyles,
-  customTextStyles,
+  customHighlightStyles,
 } from './styled'
 import Button from 'components/Button/Button';
 
@@ -42,7 +41,7 @@ const Index = () => {
               <RegularText>Meta Joker, козырная карта в колоде meta-мира, представляет новый формат NFT игры - Play to Benefit</RegularText>
               <RegularText>Твоя жизнь - не шутка, но она может радостной! Самосовершенствование это игра в которую мы играем Присоединяйся уже сегодня!</RegularText>
             </MainTextWrapper>
-            <Button customStyles={customButtonStyles}>Начать игру!</Button>
+            <Button customStyles={customButtonStyles} isStartBtn>Начать игру!</Button>
           </MainSection>
           <RegularSection>
             <Heading type='h2'>ЧТО ТАКОЕ META - JOKER</Heading>
@@ -54,7 +53,7 @@ const Index = () => {
           <RegularSection>
             <Heading type='h2'>ЦЕЛЬ ПРОЕКТА</Heading>
             <RegularText>Наша миссия и цель это подготовить современного сознательного и стремящегося к познанию себя и мира, какими они являются за завесой формы и материальных качеств, человека к новому витку развития человечества в рамках новой эпохи Водолея. Научить его управлять своим внутренним ресурсом (свойством "творца") для его практического применения в повседневную жизнь.</RegularText>
-            <RegularText customStyles={customTextStyles}>Познать то, что нельзя осязать, обонять, ощутить на вкус, услышать ухом и увидеть глазом.</RegularText>
+            <RegularText customStyles={customHighlightStyles}>Познать то, что нельзя осязать, обонять, ощутить на вкус, услышать ухом и увидеть глазом.</RegularText>
             <RegularText>Каждый талисман призван развить в человеке спящие качества ждущие своего пробуждения и использовании в нашей жизни, и построить характер своего обладателя, который неизбежно ведет его к Успеху, дорогой Удачи, ведущей к Процветанию.</RegularText>
           </RegularSection>
           <RegularSection>
@@ -69,6 +68,7 @@ const Index = () => {
           <RegularSection>
             <Heading type='h2'>ТВОРИ ДОБРО</Heading>
             <RegularText>50% прибыли от реализованных NFT нашего проекта идут на создание мира, спасение жизни людей, пострадавших от военных действий в Украине, а также на восстановление жизненно-важной инфраструктуры</RegularText>
+            <Button customStyles={customButtonStyles}>Узнать подробнее</Button>
           </RegularSection>
           <RegularSection>
             <Heading type='h2'>НАШИ ПАРТНЕРЫ</Heading>

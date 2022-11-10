@@ -5,18 +5,18 @@ export const P = styled.p(
     line-height: 1.6;
     ${customStyles};
   `
-)
+);
 
 export const H1 = styled.h1(
-  ({ theme: { colors, fontSize }}) => css`
-    font-size: ${fontSize.xl};
+  ({ theme: { fontSize }}) => css`
+    font-size: ${fontSize.xxl};
     line-height: 1.3;
   `
 );
 
 export const H2 = styled.h2(
-  ({ theme: { colors, fontSize }}) => css`
-    font-size: ${fontSize.lg};
+  ({ theme: { fontSize }}) => css`
+    font-size: ${fontSize.xl};
     margin-bottom: 2rem;
   `
 );

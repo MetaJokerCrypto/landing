@@ -29,6 +29,7 @@ export const NavItem = styled.div(
     color: ${colors.white};
     transition: transform ease-in-out 0.5s;
     font-weight: 500;
+
     &:hover {
       transform: translateY(-2px);
       transition: transform ease-in-out 0.3s;
@@ -38,10 +39,10 @@ export const NavItem = styled.div(
 
 export const Logo = styled.span(
   ({ theme: { colors, fontSize }}) => css`
+    color: ${colors.white};
     font-family: 'Merriweather', serif;
     font-size: ${fontSize.lg};
     font-weight: 700;
-    color: ${colors.white};
     cursor: pointer;
   `,
 );
