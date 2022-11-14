@@ -1,19 +1,17 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "meta-joker",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.24.7",
     "gatsby-plugin-feed": "^4.24.0",
     "gatsby-plugin-image": "^2.24.0",
-    "gatsby-plugin-manifest": "^4.24.0",
     "gatsby-plugin-netlify-cms": "^6.24.0",
-    "gatsby-plugin-sharp": "^4.24.0",
+    "gatsby-plugin-sharp": "^5.0.0",
+    "gatsby-plugin-styled-components": "^5.24.0",
     "gatsby-remark-copy-linked-files": "^5.24.0",
     "gatsby-remark-images": "^6.24.0",
     "gatsby-remark-prismjs": "^6.24.0",
@@ -26,10 +24,12 @@
     "prismjs": "^1.29.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "styled-components": "^5.3.6",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.9",
     "prettier": "^2.7.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",

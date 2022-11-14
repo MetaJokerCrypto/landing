@@ -1,6 +1,16 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+exports.onCreateWebpackConfig = ({ actions, stage }) => {
+  if (stage === 'build-html' || stage === 'develop-html') {
+    actions.setWebpackConfig({
+      resolve: {
+        modules: [path.resolve(__dirname, 'src'), 'node_modules']
+      }
+    });
+  }
+};
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
@@ -24,15 +34,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
     `
-  )
+  );
 
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
       result.errors
-    )
+    );
     return
-  }
+  };
 
   const posts = result.data.allMarkdownRemark.nodes
 
@@ -56,7 +66,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
-}
+};
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -70,7 +80,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
-}
+};
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
@@ -112,4 +122,4 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
-}
+};

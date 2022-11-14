@@ -1,94 +1,83 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from 'react';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import { ThemeProvider } from 'styled-components';
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+import GlobalStyles from 'styles/global';
+import theme from 'styles/theme';
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
+import Layout from 'components/Layout/Layout';
+import Starsfield from 'components/Starsfield/Starsfield';
+import Heading from 'components/Text/Heading';
+import RegularText from 'components/Text/RegularText';
+import Roadmap from 'components/Roadmap/Roadmap';
 
+import stars from 'images/stars.svg';
+
+import {
+  StyledText,
+  MainSection,
+  MainWrapper,
+  StarsImage,
+  MainTextWrapper,
+  RegularSection,
+  customButtonStyles,
+  customHighlightStyles,
+} from 'components/styled';
+
+import Button from 'components/Button/Button';
+
+const Index = () => {
   return (
-    <Layout location={location} title={siteTitle}>
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+        <Starsfield />
+        <Layout>
+          <MainSection>
+            <MainWrapper>
+              <Heading type='h1'>РАСКРЫВАЯ <br/> ИСТИННЫЕ <br/> ВОЗМОЖНОСТИ <br/><StyledText>NFT</StyledText></Heading>
+              <StarsImage><img src={stars} /></StarsImage>
+            </MainWrapper>
+            <MainTextWrapper>
+              <RegularText>Переход на WEB 3.0 раскрывает нам настоящий потенциал NFT технологии</RegularText>
+              <RegularText>Meta Joker, козырная карта в колоде meta-мира, представляет новый формат NFT игры - Play to Benefit</RegularText>
+              <RegularText>Твоя жизнь - не шутка, но она может радостной! Самосовершенствование это игра в которую мы играем Присоединяйся уже сегодня!</RegularText>
+            </MainTextWrapper>
+            <Button customStyles={customButtonStyles} isStartBtn>Начать игру!</Button>
+          </MainSection>
+          <RegularSection>
+            <Heading type='h2'>ЧТО ТАКОЕ META - JOKER</Heading>
+            <RegularText>Золотое Правило Нравственности является основой проекта, выполненного в NFT как P2B игра. Как живой организм, Планета постоянно развивается и совершенствуется во времени. И в настоящий момент Природа открывает нам новый способ развития Человеческой цивилизации, цифровой, который выражен через: Bitcoin, Cryptocurrency, P2B, P2E, NFT, Metaverse, WEB 3.0, VR и прочие.</RegularText>
+            <RegularText>P2B (Play-to-Benefit) это ментальный формат игры и взаимоотношений, основанных на Золотом Правиле Нравственности.</RegularText>
+            <RegularText>Основная идея P2B заключается в том, что этот Мир - Игра со своими правилами и условностями. Здесь игрок играет со своей собственной Жизнью и Реальностью, трансформируя её в желаемую для себя обстановку и собственную личность, используя "ускорители" предоставляемые P2B играми, чтобы достичь своих жизненных целей кратчайшим путём.</RegularText>
+            <RegularText>NFT игра Joker Smile, помимо возможностей NFT как крипто-актива, является талисманом, который служит усилителем навыков и судьбы своего обладателя. Таким образом мы стоим новое общество и новое будущее для нас всех</RegularText>
+          </RegularSection>
+          <RegularSection>
+            <Heading type='h2'>ЦЕЛЬ ПРОЕКТА</Heading>
+            <RegularText>Наша миссия и цель это подготовить современного сознательного и стремящегося к познанию себя и мира, какими они являются за завесой формы и материальных качеств, человека к новому витку развития человечества в рамках новой эпохи Водолея. Научить его управлять своим внутренним ресурсом (свойством "творца") для его практического применения в повседневную жизнь.</RegularText>
+            <RegularText customStyles={customHighlightStyles}>Познать то, что нельзя осязать, обонять, ощутить на вкус, услышать ухом и увидеть глазом.</RegularText>
+            <RegularText>Каждый талисман призван развить в человеке спящие качества ждущие своего пробуждения и использовании в нашей жизни, и построить характер своего обладателя, который неизбежно ведет его к Успеху, дорогой Удачи, ведущей к Процветанию.</RegularText>
+          </RegularSection>
+          <RegularSection>
+            <Heading type='h2'>ROADMAP</Heading>
+            <RegularText>Основные этапы развития, которые мы для себя ставим на данный момент. У нас в планах ещё много новаторских проектов, и здесь мы представили ближайшие шаги.</RegularText>
+            <Roadmap />
+          </RegularSection>
+          <RegularSection>
+            <Heading type='h2'>НАША КОМАНДА</Heading>
+            <RegularText>Наша команда вовлечена в создании нового формата, который в полной мере демонстрирует и раскрывает возможности NFT. Скоро каждый сможет увидеть наше детище во всей своей красе.</RegularText>
+          </RegularSection>
+          <RegularSection>
+            <Heading type='h2'>ТВОРИ ДОБРО</Heading>
+            <RegularText>50% прибыли от реализованных NFT нашего проекта идут на создание мира, спасение жизни людей, пострадавших от военных действий в Украине, а также на восстановление жизненно-важной инфраструктуры</RegularText>
+            <Button customStyles={customButtonStyles}>Узнать подробнее</Button>
+          </RegularSection>
+          <RegularSection>
+            <Heading type='h2'>НАШИ ПАРТНЕРЫ</Heading>
+            <RegularText>Если вы заинтересованы присоедениться к нашему проекту, смело связывайтесь с нами jokerofcrypto@gmail.com либо через Телеграм</RegularText>
+          </RegularSection>
+        </Layout>
+    </ThemeProvider>
+  );
+};
 
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
-    </Layout>
-  )
-}
-
-export default BlogIndex
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="All posts" />
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
-      }
-    }
-  }
-`
+export default Index;
