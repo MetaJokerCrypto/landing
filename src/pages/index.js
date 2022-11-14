@@ -22,7 +22,8 @@ import {
   RegularSection,
   customButtonStyles,
   customHighlightStyles,
-} from './styled'
+} from 'components/styled';
+
 import Button from 'components/Button/Button';
 
 const Index = () => {
