@@ -5,6 +5,7 @@ module.exports = {
     siteUrl: `https://www.google.com/`,
   },
   plugins: [
+    `gatsby-plugin-root-import`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
