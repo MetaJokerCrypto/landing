@@ -41,7 +41,7 @@ export const Logo = styled.span(
   ({ theme: { colors, fontSize }}) => css`
     color: #fff;
     font-family: 'Merriweather', serif;
-    font-size: ${fontSize.lg};
+    font-size: 2rem;
     font-weight: 700;
     cursor: pointer;
   `,
