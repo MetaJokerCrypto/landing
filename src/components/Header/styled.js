@@ -39,7 +39,7 @@ export const NavItem = styled.div(
 
 export const Logo = styled.span(
   ({ theme: { colors, fontSize }}) => css`
-    color: ${colors.white};
+    color: #fff;
     font-family: 'Merriweather', serif;
     font-size: ${fontSize.lg};
     font-weight: 700;
