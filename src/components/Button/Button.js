@@ -7,4 +7,3 @@ const Button = ({ children, customStyles }) => {
 };
 
 export default Button;
-

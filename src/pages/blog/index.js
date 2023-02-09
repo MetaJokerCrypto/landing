@@ -9,23 +9,19 @@ import GlobalStyles from 'styles/global';
 import Layout from 'components/Layout/Layout';
 
 const BlogPage = ({ data, location }) => {
-  const posts = data.allMarkdownRemark.nodes
+  const posts = data.allMarkdownRemark.nodes;
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Layout>
         <ol style={{ listStyle: `none` }}>
-          {posts.map(post => {
-            const title = post.frontmatter.title || post.fields.slug
+          {posts.map((post) => {
+            const title = post.frontmatter.title || post.fields.slug;
 
             return (
               <li key={post.fields.slug}>
-                <article
-                  className="post-list-item"
-                  itemScope
-                  itemType="http://schema.org/Article"
-                >
+                <article className="post-list-item" itemScope itemType="http://schema.org/Article">
                   <header>
                     <h2>
                       <Link to={post.fields.slug} itemProp="url">
@@ -37,19 +33,19 @@ const BlogPage = ({ data, location }) => {
                   <section>
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: post.frontmatter.description || post.excerpt,
+                        __html: post.frontmatter.description || post.excerpt
                       }}
                       itemProp="description"
                     />
                   </section>
                 </article>
               </li>
-            )
+            );
           })}
         </ol>
       </Layout>
     </ThemeProvider>
-  )
+  );
 };
 
 export default BlogPage;
@@ -75,4 +71,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

@@ -2,10 +2,7 @@ import React from 'react';
 import { Starfield } from './styled';
 
 const Starsfield = () => {
-
-  return (
-    <Starfield />
-  )
+  return <Starfield />;
 };
 
 export default Starsfield;

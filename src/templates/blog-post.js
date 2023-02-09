@@ -3,30 +3,19 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from 'components/Layout/Layout';
 
-const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
-  location,
-}) => {
-  const siteTitle = site.siteMetadata?.title || `Title`
+const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
+  const siteTitle = site.siteMetadata?.title || `Title`;
 
   return (
     <Layout location={location} title={siteTitle}>
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+      <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
         <hr />
-        <footer>
-        </footer>
+        <footer></footer>
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -35,9 +24,8 @@ const BlogPostTemplate = ({
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
-          }}
-        >
+            padding: 0
+          }}>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -55,17 +43,13 @@ const BlogPostTemplate = ({
         </ul>
       </nav>
     </Layout>
-  )
+  );
 };
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query BlogPostBySlug($id: String!, $previousPostId: String, $nextPostId: String) {
     site {
       siteMetadata {
         title
@@ -98,4 +82,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

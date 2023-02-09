@@ -8,18 +8,15 @@ import Footer from 'components/Footer/Footer';
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 
-import { Container } from './styled';
-
 const Layout = ({ children }) => {
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Header />
-      <Container>{children}</Container>
+      {children}
       <Footer />
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

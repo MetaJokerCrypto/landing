@@ -6,5 +6,5 @@ export const ButtonWrapper = styled.button(
     outline: none;
     cursor: pointer;
     ${customStyles}
-  `,
+  `
 );

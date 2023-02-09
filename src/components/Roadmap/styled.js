@@ -7,7 +7,7 @@ import green from 'images/green-c.svg';
 import blue from 'images/light-blue-c.svg';
 import purple from 'images/purple-c.svg';
 
-const handleIconType = position => {
+const handleIconType = (position) => {
   switch (position) {
     case '1':
       return red;
@@ -22,7 +22,7 @@ const handleIconType = position => {
     case '6':
       return purple;
     default:
-      return "#fff";
+      return '#fff';
   }
 };
 
@@ -46,11 +46,11 @@ export const Block = styled.div(
       &:before {
         left: 0;
       }
-    };
+    }
 
     @media (max-width: 55rem) {
       margin-left: 0;
-    };
+    }
   `
 );
 
@@ -107,14 +107,14 @@ export const Event = styled.div(
     @media (max-width: 75rem) {
       &:nth-child(odd) {
         margin-left: 2.4rem;
-      };
+      }
 
       &:nth-child(even) {
         margin-left: 1.7rem;
         &:before {
           left: -3rem;
-        };
-      };
-    };
+        }
+      }
+    }
   `
 );

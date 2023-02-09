@@ -6,22 +6,22 @@ export const Header = () => {
   return (
     <Wrapper>
       <HeaderWrapper>
-        <StyledLink to='/'>
+        <StyledLink to="/">
           <Logo>MJ</Logo>
         </StyledLink>
         <NavBar>
-          <StyledLink to='/'>
+          <StyledLink to="/">
             <NavItem>Play</NavItem>
           </StyledLink>
-          <StyledLink to='/'>
+          <StyledLink to="/">
             <NavItem>Все проекты</NavItem>
           </StyledLink>
-          <StyledLink to='/blog'>
+          <StyledLink to="/blog">
             <NavItem>Блог</NavItem>
           </StyledLink>
-        <StyledLink to=''>
-          <NavItem>О нас</NavItem>
-        </StyledLink>
+          <StyledLink to="">
+            <NavItem>О нас</NavItem>
+          </StyledLink>
         </NavBar>
       </HeaderWrapper>
     </Wrapper>

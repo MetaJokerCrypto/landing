@@ -17,11 +17,11 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const NavBar = styled.div(
-  ({ theme: { fontSize }}) => css`
+  ({ theme: { fontSize } }) => css`
     display: flex;
     gap: 4rem;
     font-size: ${fontSize.sm};
-  `,
+  `
 );
 
 export const NavItem = styled.div(
@@ -34,17 +34,17 @@ export const NavItem = styled.div(
       transform: translateY(-2px);
       transition: transform ease-in-out 0.3s;
     }
-  `,
+  `
 );
 
 export const Logo = styled.span(
-  ({ theme: { colors, fontSize }}) => css`
+  ({ theme: { colors, fontSize } }) => css`
     color: #fff;
     font-family: 'Merriweather', serif;
     font-size: 2rem;
     font-weight: 700;
     cursor: pointer;
-  `,
+  `
 );
 
 export const StyledLink = styled(Link)`

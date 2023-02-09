@@ -13,7 +13,7 @@ const Footer = () => {
         <span>OpenSea</span>
       </Socials>
     </Wrapper>
-  )
+  );
 };
 
 export default Footer;
