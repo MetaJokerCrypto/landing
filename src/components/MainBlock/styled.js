@@ -54,7 +54,7 @@ export const PartnerLink = styled.a(
 
 export const customButtonStyles = ({ theme: { colors, fontSize } }) => css`
   padding: 0.8em 2.5em;
-  margin-top: 2rem;
+  margin: 2rem 0 5rem;
   font-size: ${fontSize.md};
   font-weight: 700;
   color: ${colors.white};

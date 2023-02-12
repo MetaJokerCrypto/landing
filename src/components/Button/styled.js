@@ -5,6 +5,7 @@ export const ButtonWrapper = styled.button(
     border: none;
     outline: none;
     cursor: pointer;
+
     ${customStyles}
   `
 );

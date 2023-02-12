@@ -8,10 +8,16 @@ export default {
   },
 
   fontSize: {
+    xs: '0.875rem',
     sm: '1rem',
     md: '1.25rem',
     lg: '2rem',
     xl: '2.5rem',
     xxl: '4.5rem'
+  },
+
+  breakpoints: {
+    md: '924px',
+    lg: '1300px',
   }
 };

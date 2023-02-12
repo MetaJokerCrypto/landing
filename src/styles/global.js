@@ -1,7 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-import theme from 'styles/theme';
-
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -11,11 +9,14 @@ const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat&display=swap');
   };
 
+  html, body, #___gatsby, #gatsby-focus-wrapper {
+  height: 100%;
+}
+
   body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    background-color: ${theme.colors.black};
+    background-color: #161e30;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;

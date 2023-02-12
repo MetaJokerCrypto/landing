@@ -10,7 +10,7 @@ export const Header = () => {
           <Logo>MJ</Logo>
         </StyledLink>
         <NavBar>
-        <StyledLink to='/games'>
+          <StyledLink to='/games'>
             <NavItem>Games</NavItem>
           </StyledLink>
           <StyledLink to='/blog'>

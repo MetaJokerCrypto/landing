@@ -19,16 +19,18 @@ export const HeaderWrapper = styled.div`
 export const NavBar = styled.div(
   ({ theme: { fontSize } }) => css`
     display: flex;
-    gap: 4rem;
+    gap: 4.5rem;
     font-size: ${fontSize.sm};
   `
 );
 
 export const NavItem = styled.div(
-  ({ theme: { colors } }) => css`
+  ({ theme: { colors, fontSize } }) => css`
     color: ${colors.white};
-    transition: transform ease-in-out 0.5s;
-    font-weight: 500;
+    font-size: ${fontSize.xs};
+    transition: transform ease-in-out 0.3s;
+    font-weight: 700;
+    text-transform: uppercase;
 
     &:hover {
       transform: translateY(-2px);

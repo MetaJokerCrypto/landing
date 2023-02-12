@@ -7,7 +7,7 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
   const siteTitle = site.siteMetadata?.title || `Title`;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <div location={location} title={siteTitle}>
       <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
@@ -42,7 +42,7 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
           </li>
         </ul>
       </nav>
-    </Layout>
+    </div>
   );
 };
 

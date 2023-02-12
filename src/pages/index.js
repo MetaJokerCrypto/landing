@@ -22,7 +22,7 @@ const Index = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Starsfield />
-      <Layout width="60">
+      <Layout>
         <Container>
           <MainSection>
             <MainBlock />

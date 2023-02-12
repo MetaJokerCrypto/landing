@@ -7,7 +7,7 @@ import Roadmap from 'components/Roadmap/Roadmap'
 const RoadmapBlock = () => {
   return (
     <>
-      <Heading type="h2">ROADMAP</Heading>
+      <Heading type="h2">Roadmap</Heading>
       <RegularText>Основные этапы развития, которые мы для себя ставим на данный момент.</RegularText>
       <Roadmap />
     </>
