@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'gatsby';
 
 export const Wrapper = styled.div`
   padding: 7rem 10rem 0;
@@ -23,3 +24,9 @@ export const List = styled.ol(
     }
   `
 )
+
+export const StyledLink = styled(Link)`
+  width: 100%;
+  color: white;
+  text-decoration: none;
+`

@@ -50,6 +50,5 @@
     "lint:styles": "stylelint './**/*.{js,ts,tsx}'"
   },
   "version": "1.0.0",
-  "main": "index.js",
-  "author": "Ivan Starikov <vanya.st.ov@gmail.com>"
+  "main": "index.js"
 }

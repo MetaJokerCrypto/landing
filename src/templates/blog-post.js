@@ -1,55 +1,45 @@
 import * as React from 'react';
+import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 
 import Layout from 'components/Layout/Layout';
 
-const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
-  const siteTitle = site.siteMetadata?.title || `Title`;
+const BlogPostTemplate = ({
+  data: { site, markdownRemark: post },
+  location,
+}) => {
+  const siteTitle = site.siteMetadata?.title || `Title`
 
   return (
-    <div location={location} title={siteTitle}>
-      <article className="blog-post" itemScope itemType="http://schema.org/Article">
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-        </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
-        <hr />
-        <footer></footer>
-      </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0
-          }}>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
-    </div>
-  );
+    <Layout location={location} title={siteTitle}>
+      <Wrapper>
+        <article
+          className="blog-post"
+          itemScope
+          itemType="http://schema.org/Article"
+        >
+          <header>
+            <Title itemProp="headline">{post.frontmatter.title}</Title>
+            <p>{post.frontmatter.date}</p>
+          </header>
+          <section
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            itemProp="articleBody"
+          />
+        </article>
+      </Wrapper>
+    </Layout>
+  )
 };
 
-export default BlogPostTemplate;
+export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($id: String!, $previousPostId: String, $nextPostId: String) {
+  query BlogPostBySlug(
+    $id: String!
+    $previousPostId: String
+    $nextPostId: String
+  ) {
     site {
       siteMetadata {
         title
@@ -82,4 +72,16 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
+
+const Wrapper = styled.div`
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 7rem 3rem;
+`
+
+const Title = styled.h1`
+  margin-bottom: 2rem;
+  font-size: 32px;
+  text-transform: uppercase;
+`

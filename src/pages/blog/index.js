@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -10,7 +10,7 @@ import Layout from 'components/Layout/Layout';
 import ArticleCard from 'components/ArticleCard/ArticleCard';
 import Heading from 'components/Text/Heading';
 
-import { Wrapper, List } from 'styles/pages/blog';
+import { Wrapper, List, StyledLink } from 'styles/pages/blog';
 
 const BlogPage = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
@@ -24,12 +24,14 @@ const BlogPage = ({ data }) => {
           <List>
             {posts.map(({ frontmatter, fields }, index) => {
               return (
-                <ArticleCard
-                  key={index}
-                  slug={fields.slug}
-                  title={frontmatter.title}
-                  date={frontmatter.date}
-                />
+                <StyledLink to={fields.slug}>
+                  <ArticleCard
+                    key={index}
+                    slug={fields.slug}
+                    title={frontmatter.title}
+                    date={frontmatter.date}
+                  />
+                </StyledLink>
               )
             })}
           </List>
