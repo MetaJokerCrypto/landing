@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 
 export const Wrapper = styled.div`
-  height: 100vh;
   max-width: 80rem;
   margin: 0 auto;
   padding: 10rem 3rem;

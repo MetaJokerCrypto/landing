@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Heading from 'components/Text/Heading';
 import RegularText from 'components/Text/RegularText';
@@ -34,7 +34,7 @@ const AboutBlock = () => {
         Присоединяйся к нашему проекту, смело связывайтесь с нами jokerofcrypto@gmail.com либо через Телеграм
       </RegularText>
     </>
-  )
-}
+  );
+};
 
-export default AboutBlock
+export default AboutBlock;

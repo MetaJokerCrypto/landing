@@ -6,9 +6,9 @@ import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 
 import Layout from 'components/Layout/Layout';
-import Collection from 'components/Collection/Collection';
+import Collections from 'components/Collections/Collections';
 
-import { Section } from 'styles/pages/collection'
+import { Section } from 'styles/pages/collection';
 
 const CollectionPage = () => {
   return (
@@ -16,7 +16,7 @@ const CollectionPage = () => {
       <GlobalStyles />
         <Layout>
           <Section>
-            <Collection />
+            <Collections />
           </Section>
         </Layout>
     </ThemeProvider>

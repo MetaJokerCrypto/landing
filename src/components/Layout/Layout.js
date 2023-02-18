@@ -8,17 +8,20 @@ import Footer from 'components/Footer/Footer';
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 
-import { Content } from './styled'
+import { Wrapper, Content } from './styled'
 
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
+      <Wrapper>
+        <Header />
+        <Content>
+          {children}
+        </Content>
+        <Footer />
+      </Wrapper>
       <Header />
-      <Content>
-        {children}
-      </Content>
-      <Footer />
     </ThemeProvider>
   );
 };

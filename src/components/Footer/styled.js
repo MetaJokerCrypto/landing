@@ -6,13 +6,12 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   margin-top: auto;
-  padding: 4rem 5rem;
+  padding: 2rem 5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 `;
 
 export const Socials = styled.ul`
   display: flex;
-  align-items: center;
   gap: 2rem;
   list-style-type: none;
 `;
