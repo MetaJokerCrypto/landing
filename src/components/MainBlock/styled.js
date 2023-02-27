@@ -61,6 +61,7 @@ export const customButtonStyles = ({ theme: { colors, fontSize } }) => css`
   border-radius: 2rem;
   background: linear-gradient(217deg, rgb(255 153 255) 0%, rgb(9 73 122 / 73%) 62%);
   opacity: 0.9;
+
   &:hover {
     opacity: 1;
   }

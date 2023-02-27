@@ -1,22 +1,24 @@
 import * as React from 'react';
 
 import RegularText from 'components/Text/RegularText';
+import Button from 'components/Button/Button';
 
 import {
   TitleWrapper,
   Number,
   Image,
   CardWrapper,
-  Content
+  ButtonWrapper,
+  customButtonStyles
 } from './styled';
 
 const Collections = ({ data }) => {
-  const { id, name, image, description } = data
+  const { id, name, image, description, openSeaLink } = data
   return (
     <>
       <CardWrapper>
         <Image src={image} />
-        <Content>
+        <div>
           <TitleWrapper>
             <Number>{id}</Number>
             <span>{name}</span>
@@ -26,8 +28,16 @@ const Collections = ({ data }) => {
               <RegularText>{item}</RegularText>
             )
           })}
-        </Content>
+        </div>
       </CardWrapper>
+      <ButtonWrapper>
+        <a href={openSeaLink}>
+          <Button customStyles={customButtonStyles}>
+            Начать игру!
+          </Button>
+        </a>
+        <span>Кликни чтобы начать Играть Миром Подробности в скрытом контенте NFT</span>
+      </ButtonWrapper>
     </>
   );
 };

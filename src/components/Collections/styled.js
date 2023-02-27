@@ -30,5 +30,6 @@ export const Button = styled.button(
     border: none;
     border-radius: 1rem;
     color: ${colors.white};
+    cursor: pointer;
   `
 )
