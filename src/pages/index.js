@@ -15,6 +15,7 @@ import AboutBlock from 'components/AboutBlock/AboutBlock';
 import {
   Container,
   MainSection,
+  RoadmapSection,
 } from 'styles/pages/index';
 
 const Index = () => {
@@ -30,9 +31,9 @@ const Index = () => {
           <section>
             <ProjectInfoBlock />
           </section>
-          <section>
+          <RoadmapSection>
             <RoadmapBlock />
-          </section>
+          </RoadmapSection>
           <section>
             <AboutBlock />
           </section>

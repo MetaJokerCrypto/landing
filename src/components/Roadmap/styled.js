@@ -26,33 +26,10 @@ const handleIconType = (position) => {
   }
 };
 
-export const Block = styled.div(
-  ({ theme: { colors } }) => css`
-    z-index: 1;
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      height: 100%;
-      width: 1px;
-      background-color: ${colors.white};
-      left: 50%;
-      margin: 0.6rem 0;
-    }
-
-    @media (max-width: 75rem) {
-      margin-left: 4rem;
-      &:before {
-        left: 0;
-      }
-    }
-
-    @media (max-width: 55rem) {
-      margin-left: 0;
-    }
-  `
-);
+export const Wrapper = styled.div`
+  z-index: 1;
+  position: relative;
+`
 
 export const Title = styled.div(
   ({ theme: { fontSize } }) => css`
@@ -71,11 +48,11 @@ export const Date = styled.div(
 );
 
 export const Event = styled.div(
-  ({ theme: { colors }, position }) => css`
+  ({ position }) => css`
     position: relative;
-    max-width: 32.5rem;
+    /* max-width: 45rem; */
     padding: 1.5rem;
-    margin: 3.75rem 1rem;
+    margin: 3.75rem 0 0 4rem;
     border: 1px solid white;
     border-radius: 0.4rem;
     transition: all 0.3s ease-in-out;
@@ -84,37 +61,31 @@ export const Event = styled.div(
       content: '';
       position: absolute;
       top: 40%;
-      left: -3.6rem;
+      left: -5.3rem;
       width: 2.5rem;
       height: 2.5rem;
-      background: url(${({ position }) => handleIconType(position)});
+      background: url(${() => handleIconType(position)});
       background-size: 2.5rem 2.5rem;
       background-repeat: no-repeat;
     }
-
-    &:nth-child(odd) {
-      margin-left: calc(50% + 2.4rem);
-      width: 100%;
-    }
-
-    &:nth-child(even) {
-      margin-left: calc(50% - 35rem);
-      &:before {
-        left: calc(100% + 1.4rem);
-      }
-    }
-
-    @media (max-width: 75rem) {
-      &:nth-child(odd) {
-        margin-left: 2.4rem;
-      }
-
-      &:nth-child(even) {
-        margin-left: 1.7rem;
-        &:before {
-          left: -3rem;
-        }
-      }
-    }
   `
 );
+
+export const Content = styled.div(
+  ({ theme: { colors } }) => css`
+    &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      background-color: ${colors.white};
+      margin: 0.6rem 0;
+    }
+
+    @media (min-width: 55rem) {
+      width: 60%;
+      margin: 0 auto;
+    }
+  `
+)
+

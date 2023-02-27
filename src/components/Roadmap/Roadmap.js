@@ -2,12 +2,12 @@ import React from 'react';
 
 import RegularText from 'components/Text/RegularText';
 
-import { Block, Event, Date, Title } from './styled';
+import { Wrapper, Content, Event, Date, Title } from './styled';
 
 const Roadmap = () => {
   return (
-    <>
-      <Block>
+    <Wrapper>
+      <Content>
         <Event position="1">
           <Date>2022.06.06</Date>
           <Title>ЗАПУСК ПРОЕКТА</Title>
@@ -48,8 +48,8 @@ const Roadmap = () => {
           <Title>ЗАПУСК DAO</Title>
           <RegularText>Создание благотворительной/инвестиционной программы</RegularText>
         </Event>
-      </Block>
-    </>
+      </Content>
+    </Wrapper>
   );
 };
 

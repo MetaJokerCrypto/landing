@@ -50,40 +50,6 @@ export const MainTextWrapper = styled.div`
   margin: 10rem 0 0;
 `;
 
-// export const PartnersWrapper = styled.div`
-//   display: flex;
-//   gap: 2rem;
-//   margin-bottom: 4rem;
-// `;
-
-// export const PartnerLink = styled.a(
-//   ({ theme: { colors, fontSize } }) => css`
-//     color: ${colors.white};
-//     font-size: ${fontSize.md};
-//     text-decoration: none;
-//     transition: all 0.4ms;
-
-//     &:hover {
-//       color: ${colors.lightBlue};
-//     }
-//   `
-// );
-
-// export const customButtonStyles = ({ theme: { colors, fontSize } }) => css`
-//   padding: 0.8em 2.5em;
-//   margin-top: 2rem;
-//   font-size: ${fontSize.md};
-//   font-weight: 700;
-//   color: ${colors.white};
-//   border-radius: 2rem;
-//   background: linear-gradient(217deg, rgb(255 153 255) 0%, rgb(9 73 122 / 73%) 62%);
-//   opacity: 0.9;
-//   &:hover {
-//     opacity: 1;
-//   }
-// `;
-
-// export const customHighlightStyles = ({ theme: { colors } }) => css`
-//   color: #fcf6a9c7;
-//   font-weight: 600;
-// `;
+export const RoadmapSection = styled.div`
+  padding-bottom: 7rem;
+`;
