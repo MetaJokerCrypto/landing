@@ -13,17 +13,17 @@ import {
 } from './styled';
 
 const Collections = ({ data }) => {
-  const { id, name, image, description, openSeaLink } = data
+
   return (
     <>
       <CardWrapper>
-        <Image src={image} />
+        <Image src={data?.image} />
         <div>
           <TitleWrapper>
-            <Number>{id}</Number>
-            <span>{name}</span>
+            <Number>{data?.id}</Number>
+            <span>{data?.name}</span>
           </TitleWrapper>
-          {description.map(item => {
+          {data?.description.map(item => {
             return (
               <RegularText>{item}</RegularText>
             )
@@ -31,7 +31,7 @@ const Collections = ({ data }) => {
         </div>
       </CardWrapper>
       <ButtonWrapper>
-        <a href={openSeaLink}>
+        <a href={data?.openSeaLink}>
           <Button customStyles={customButtonStyles}>
             Начать игру!
           </Button>
