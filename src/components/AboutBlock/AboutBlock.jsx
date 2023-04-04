@@ -3,13 +3,9 @@ import React from 'react';
 import Heading from 'components/Text/Heading';
 import RegularText from 'components/Text/RegularText';
 
-import {
-  PartnersWrapper,
-  PartnerLink,
-  customHighlightStyles
-} from './styled';
+import { PartnersWrapper, PartnerLink, customHighlightStyles } from './styled';
 
-const AboutBlock = () => {
+function AboutBlock() {
   return (
     <>
       <Heading type="h2">Наши партнеры</Heading>
@@ -31,10 +27,12 @@ const AboutBlock = () => {
         </li>
       </PartnersWrapper>
       <RegularText customStyles={customHighlightStyles}>
-        Присоединяйся к нашему проекту, смело связывайтесь с нами jokerofcrypto@gmail.com либо через Телеграм
+        <span>
+          Присоединяйся к нашему проекту, смело связывайтесь с нами jokerofcrypto@gmail.com либо через Телеграм
+        </span>
       </RegularText>
     </>
   );
-};
+}
 
 export default AboutBlock;

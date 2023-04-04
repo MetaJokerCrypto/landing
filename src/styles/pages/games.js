@@ -5,12 +5,12 @@ export const Wrapper = styled.div`
   max-width: 80rem;
   margin: 0 auto;
   padding: 10rem 3rem;
-`
+`;
 
 export const ListWrapper = styled.div`
   display: flex;
   gap: 3rem;
-`
+`;
 
 export const Game = styled.div(
   ({ theme: { fontSize, colors }, active }) => css`
@@ -24,14 +24,14 @@ export const Game = styled.div(
     border-radius: 0.2rem;
     background-color: ${active ? colors.lightBlue : colors.gray};
   `
-)
+);
 
 export const GameTitle = styled.span(
-  ({ theme: { colors }  }) => css`
-    color: ${colors.white}
+  ({ theme: { colors } }) => css`
+    color: ${colors.white};
   `
-)
+);
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-`
+`;

@@ -2,19 +2,9 @@ import * as React from 'react';
 
 import Heading from 'components/Text/Heading';
 
-import { data } from 'data/cardsData'
+import { data } from 'data/cardsData';
 
-console.log(data);
-
-import {
-  CardsWrapper,
-  Card,
-  CardImg,
-  Button,
-  StyledLink
-
-} from './styled';
-
+import { CardsWrapper, Card, CardImg, Button, StyledLink } from './styled';
 
 const Collections = () => {
   return (

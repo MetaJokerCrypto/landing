@@ -7,15 +7,9 @@ import Button from 'components/Button/Button';
 
 import stars from 'images/stars.svg';
 
-import { data } from 'data/mainBlockData'
+import { data } from 'data/mainBlockData';
 
-import {
-  Wrapper,
-  MainTextWrapper,
-  HeadingWrapper,
-  StyledText,
-  customButtonStyles
-} from './styled';
+import { Wrapper, MainTextWrapper, HeadingWrapper, StyledText, customButtonStyles } from './styled';
 
 const MainBlock = () => {
   return (
@@ -33,9 +27,7 @@ const MainBlock = () => {
       </Wrapper>
       <MainTextWrapper>
         {data.map((item, i) => {
-          return (
-            <RegularText key={i}>{item}</RegularText>
-          )
+          return <RegularText key={i}>{item}</RegularText>;
         })}
       </MainTextWrapper>
       <Link to="/collection">

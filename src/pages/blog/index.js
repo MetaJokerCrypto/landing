@@ -13,32 +13,27 @@ import Heading from 'components/Text/Heading';
 import { Wrapper, List, StyledLink } from 'styles/pages/blog';
 
 const BlogPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.nodes
+  const posts = data.allMarkdownRemark.nodes;
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Layout>
         <Wrapper>
-          <Heading type='h2'>Статьи</Heading>
+          <Heading type="h2">Статьи</Heading>
           <List>
             {posts.map(({ frontmatter, fields }, index) => {
               return (
                 <StyledLink to={fields.slug}>
-                  <ArticleCard
-                    key={index}
-                    slug={fields.slug}
-                    title={frontmatter.title}
-                    date={frontmatter.date}
-                  />
+                  <ArticleCard key={index} slug={fields.slug} title={frontmatter.title} date={frontmatter.date} />
                 </StyledLink>
-              )
+              );
             })}
           </List>
         </Wrapper>
       </Layout>
     </ThemeProvider>
-  )
+  );
 };
 
 export default BlogPage;
@@ -64,4 +59,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

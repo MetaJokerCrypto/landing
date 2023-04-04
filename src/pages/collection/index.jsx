@@ -14,11 +14,11 @@ const CollectionPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-        <Layout>
-          <Section>
-            <Collections />
-          </Section>
-        </Layout>
+      <Layout>
+        <Section>
+          <Collections />
+        </Section>
+      </Layout>
     </ThemeProvider>
   );
 };

@@ -12,11 +12,7 @@ import MainBlock from 'components/MainBlock/MainBlock';
 import ProjectInfoBlock from 'components/ProjectInfoBlock/ProjectInfoBlock';
 import AboutBlock from 'components/AboutBlock/AboutBlock';
 
-import {
-  Container,
-  MainSection,
-  RoadmapSection,
-} from 'styles/pages/index';
+import { Container, MainSection, RoadmapSection } from 'styles/pages/index';
 
 const Index = () => {
   return (

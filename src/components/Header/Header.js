@@ -10,18 +10,18 @@ export const Header = () => {
           <Logo>MJ</Logo>
         </StyledLink>
         <NavBar>
-          <StyledLink to='/games'>
+          <StyledLink to="/games">
             <NavItem>Games</NavItem>
           </StyledLink>
-          <StyledLink to='/blog'>
+          <StyledLink to="/blog">
             <NavItem>Блог</NavItem>
           </StyledLink>
-          <StyledLink to='/p2b'>
+          <StyledLink to="/p2b">
             <NavItem>P2B</NavItem>
           </StyledLink>
-        <StyledLink to='/about'>
-          <NavItem>О нас</NavItem>
-        </StyledLink>
+          <StyledLink to="/about">
+            <NavItem>О нас</NavItem>
+          </StyledLink>
         </NavBar>
       </HeaderWrapper>
     </Wrapper>

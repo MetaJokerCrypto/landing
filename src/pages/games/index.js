@@ -7,33 +7,26 @@ import theme from 'styles/theme';
 
 import Layout from 'components/Layout/Layout';
 
-import {
-  Wrapper,
-  ListWrapper,
-  Game,
-  GameTitle,
-  StyledLink,
-} from 'styles/pages/games';
-
+import { Wrapper, ListWrapper, Game, GameTitle, StyledLink } from 'styles/pages/games';
 
 const GamesPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-        <Layout>
-          <Wrapper>
-            <ListWrapper>
-              <StyledLink to="/games/joker-smile">
-                <Game active>
-                  <GameTitle>Joker Smile</GameTitle>
-                </Game>
-              </StyledLink>
-              <Game>
-                <GameTitle>Coming soon...</GameTitle>
+      <Layout>
+        <Wrapper>
+          <ListWrapper>
+            <StyledLink to="/games/joker-smile">
+              <Game active>
+                <GameTitle>Joker Smile</GameTitle>
               </Game>
-            </ListWrapper>
-          </Wrapper>
-        </Layout>
+            </StyledLink>
+            <Game>
+              <GameTitle>Coming soon...</GameTitle>
+            </Game>
+          </ListWrapper>
+        </Wrapper>
+      </Layout>
     </ThemeProvider>
   );
 };

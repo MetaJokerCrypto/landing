@@ -1,14 +1,13 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 export const TitleWrapper = styled.div`
   margin-bottom: 2rem;
   font-size: 46px;
   font-weight: 700;
-
-`
+`;
 
 export const Number = styled.span`
-   margin-right: 1.5rem;
+  margin-right: 1.5rem;
 `;
 
 export const Image = styled.img`

@@ -3,9 +3,9 @@ import React from 'react';
 import Heading from 'components/Text/Heading';
 import RegularText from 'components/Text/RegularText';
 
-import { data } from 'data/projectInfoData'
+import { data } from 'data/projectInfoData';
 
-import { Wrapper } from './styled'
+import { Wrapper } from './styled';
 
 const ProjectInfoBlock = () => {
   return (
@@ -25,11 +25,10 @@ const ProjectInfoBlock = () => {
               ))}
             </ul>
           </Wrapper>
-        )
+        );
       })}
     </>
   );
 };
 
 export default ProjectInfoBlock;
-

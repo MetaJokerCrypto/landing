@@ -32,13 +32,14 @@
   "devDependencies": {
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "gatsby-plugin-root-import": "^2.0.9",
-    "prettier": "2.8.4"
+    "prettier": "^2.8.7"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
@@ -49,8 +50,9 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "lint:styles": "stylelint './**/*.{js,ts,tsx}'"
+    "lint": "eslint 'src/**/*/**/*.{js,jsx}'",
+    "lint:fix": "eslint --fix --ext .js,.jsx",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "version": "1.0.0",
   "main": "index.js"

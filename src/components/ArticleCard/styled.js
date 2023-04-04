@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import Link from 'gatsby-link';
 
-
 export const Wrapper = styled.div(
   ({ theme: { colors, breakpoints } }) => css`
     width: 100%;
@@ -12,7 +11,7 @@ export const Wrapper = styled.div(
       grid-template-columns: repeat(2, 1fr);
     }
   `
-)
+);
 
 export const Content = styled.div`
   display: flex;
@@ -26,18 +25,18 @@ export const Title = styled.span(
     font-size: ${fontSize.md};
     color: ${colors.blue};
   `
-)
+);
 
 export const Date = styled.span(
   ({ theme: { colors, fontSize } }) => css`
     font-size: ${fontSize.xs};
     color: ${colors.white};
   `
-)
+);
 
 export const StyledLink = styled(Link)(
   ({ theme: { colors } }) => css`
     text-decoration: none;
     color: ${colors.pink};
   `
-)
+);

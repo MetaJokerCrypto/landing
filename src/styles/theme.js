@@ -18,6 +18,6 @@ export default {
 
   breakpoints: {
     md: '924px',
-    lg: '1300px',
+    lg: '1300px'
   }
 };

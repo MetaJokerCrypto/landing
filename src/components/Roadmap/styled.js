@@ -29,7 +29,7 @@ const handleIconType = (position) => {
 export const Wrapper = styled.div`
   z-index: 1;
   position: relative;
-`
+`;
 
 export const Title = styled.div(
   ({ theme: { fontSize } }) => css`
@@ -87,5 +87,4 @@ export const Content = styled.div(
       margin: 0 auto;
     }
   `
-)
-
+);

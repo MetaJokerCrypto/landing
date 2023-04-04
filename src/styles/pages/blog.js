@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 `;
 
 export const List = styled.ol(
- ({ theme: { breakpoints } }) => css`
+  ({ theme: { breakpoints } }) => css`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem 1rem;
@@ -23,10 +23,10 @@ export const List = styled.ol(
       grid-template-columns: repeat(1, 1fr);
     }
   `
-)
+);
 
 export const StyledLink = styled(Link)`
   width: 100%;
   color: white;
   text-decoration: none;
-`
+`;

@@ -4,42 +4,28 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from 'components/Layout/Layout';
 
-const BlogPostTemplate = ({
-  data: { site, markdownRemark: post },
-  location,
-}) => {
-  const siteTitle = site.siteMetadata?.title || `Title`
+const BlogPostTemplate = ({ data: { site, markdownRemark: post }, location }) => {
+  const siteTitle = site.siteMetadata?.title || `Title`;
 
   return (
     <Layout location={location} title={siteTitle}>
       <Wrapper>
-        <article
-          className="blog-post"
-          itemScope
-          itemType="http://schema.org/Article"
-        >
+        <article className="blog-post" itemScope itemType="http://schema.org/Article">
           <header>
             <Title itemProp="headline">{post.frontmatter.title}</Title>
             <p>{post.frontmatter.date}</p>
           </header>
-          <section
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            itemProp="articleBody"
-          />
+          <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
         </article>
       </Wrapper>
     </Layout>
-  )
+  );
 };
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query BlogPostBySlug($id: String!, $previousPostId: String, $nextPostId: String) {
     site {
       siteMetadata {
         title
@@ -72,16 +58,16 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 const Wrapper = styled.div`
   max-width: 80rem;
   margin: 0 auto;
   padding: 7rem 3rem;
-`
+`;
 
 const Title = styled.h1`
   margin-bottom: 2rem;
   font-size: 32px;
   text-transform: uppercase;
-`
+`;

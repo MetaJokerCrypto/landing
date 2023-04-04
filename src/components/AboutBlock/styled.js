@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 export const PartnersWrapper = styled.ul`
   display: flex;
@@ -22,7 +22,7 @@ export const PartnerLink = styled.a(
   `
 );
 
-export const customHighlightStyles = ({ theme: { colors } }) => css`
+export const customHighlightStyles = () => css`
   margin-bottom: 6rem;
   color: #fcf6a9c7;
   font-weight: 600;

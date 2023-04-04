@@ -9,19 +9,16 @@ import Layout from 'components/Layout/Layout';
 import Heading from 'components/Text/Heading';
 import RegularText from 'components/Text/RegularText';
 
-import { data } from 'data/aboutPageData'
+import { data } from 'data/aboutPageData';
 
-import {
-  Container
-} from 'styles/pages/about';
-
+import { Container } from 'styles/pages/about';
 
 const About = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-        <Layout>
-          <Container>
+      <Layout>
+        <Container>
           {data?.map(({ title, content }, i) => {
             return (
               <div key={i}>
@@ -51,9 +48,9 @@ const About = () => {
                   </div>
                 ))}
               </div>
-            )
+            );
           })}
-            {/* <Heading>О нас</Heading>
+          {/* <Heading>О нас</Heading>
             <RegularText>
             Проект Meta Joker создан группой мета-психологов и крипто-энтузиастами из сообщества Era Nova, как психотерапевтический метод самореализации Человека.
             Мета Сообщество Era Nova, основано с целью реализации морально-нравственных норм и универсальной системы этического взаимодействия Человека с различными формами жизни и сферами мироздания на основе признания этики Взаимности и самоценности всех проявлений Жизни.
@@ -90,8 +87,8 @@ const About = () => {
             <Heading>Эволюция нравственности - это высокий уровень самоконтроля и дисциплины Сознания</Heading>
             <RegularText>Мы живём в обществе, в котором нас разделили и заставили воевать друг с другом. Если мы не объединимся в осознании, у нас нет шанса на выживание.</RegularText>
             <RegularText>Присоединяйся к мета-сообществу ERA NOVA, если ты видишь, что происходит с этим миром, если у тебя есть здравый смысл и ты хочешь взять ответственность за свою жизнь, не перекладывая её на плечи политиков. </RegularText> */}
-          </Container>
-        </Layout>
+        </Container>
+      </Layout>
     </ThemeProvider>
   );
 };

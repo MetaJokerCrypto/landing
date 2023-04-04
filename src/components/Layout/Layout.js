@@ -8,7 +8,7 @@ import Footer from 'components/Footer/Footer';
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 
-import { Wrapper, Content } from './styled'
+import { Wrapper, Content } from './styled';
 
 const Layout = ({ children }) => {
   return (
@@ -16,9 +16,7 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <Wrapper>
         <Header />
-        <Content>
-          {children}
-        </Content>
+        <Content>{children}</Content>
         <Footer />
       </Wrapper>
       <Header />
