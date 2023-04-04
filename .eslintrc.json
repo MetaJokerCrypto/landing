@@ -13,7 +13,8 @@
   "rules": {
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
     "max-len": ["error", { "code": 120 }],
-    "comma-dangle": ["off"]
+    "comma-dangle": ["off"],
+    "react/function-component-definition": ["off"]
   },
   "settings": {
     "import/resolver": {

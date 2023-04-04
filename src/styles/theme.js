@@ -17,7 +17,9 @@ export default {
   },
 
   breakpoints: {
-    md: '924px',
+    xs: '325px',
+    sm: '550px',
+    md: '1000px',
     lg: '1300px'
   }
 };
