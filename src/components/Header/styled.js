@@ -9,10 +9,10 @@ export const Wrapper = styled.div`
 `;
 
 export const HeaderWrapper = styled.div(
-  ({ theme: { breakpoints } }) => css`
+  ({ theme: { breakpoints, colors } }) => css`
     padding: 1.5rem 5rem;
+    background-color: ${colors.header};
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(40px);
 
     @media (max-width: ${breakpoints.md}) {
       padding: 1.5rem;

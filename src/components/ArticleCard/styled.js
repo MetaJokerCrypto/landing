@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import Link from 'gatsby-link';
 
 export const Wrapper = styled.div(
-  ({ theme: { colors, breakpoints } }) => css`
+  ({ theme: { breakpoints } }) => css`
     width: 100%;
     max-width: 20rem;
     border: 1px solid white;

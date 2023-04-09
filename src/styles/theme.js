@@ -1,10 +1,14 @@
 export default {
   colors: {
     white: '#e5e5e5',
+    lightGray: '#d9d9d9',
     black: '#000000',
     purple: '#bf87ed',
     lightBlue: '#80b9ff',
-    darkBlue: '#19275e'
+    darkBlue: '#19275e',
+    header: '#1C263D',
+    footer: '#1C263D',
+    accentColor: '#fcf6a9c7'
   },
 
   fontSize: {

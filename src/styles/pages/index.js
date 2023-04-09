@@ -8,18 +8,13 @@ export const StyledText = styled.span(
   `
 );
 
-export const Container = styled.div`
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 0 4rem;
+export const PageWrapper = styled.section`
+  padding: 10rem 0 4rem;
 `;
 
-export const MainSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  padding-top: 10rem;
+export const TextContainer = styled.div`
+  max-width: 60rem;
+  margin: 5rem auto 0;
 `;
 
 export const MainHeading = styled(Heading)`
@@ -44,12 +39,21 @@ export const HeadingWrapper = styled.div`
 
 export const StarsImage = styled.div``;
 
-export const MainTextWrapper = styled.div`
-  width: 100%;
-  align-items: start;
-  margin: 10rem 0 0;
-`;
-
 export const RoadmapSection = styled.div`
   padding-bottom: 7rem;
+`;
+
+export const customButtonStyles = ({ theme: { colors, fontSize } }) => css`
+  padding: 0.8em 2.5em;
+  margin: 2rem 0 5rem;
+  font-size: ${fontSize.md};
+  font-weight: 700;
+  color: ${colors.white};
+  border-radius: 2rem;
+  background: linear-gradient(217deg, rgb(255 153 255) 0%, rgb(9 73 122 / 73%) 62%);
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
