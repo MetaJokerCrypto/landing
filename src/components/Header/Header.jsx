@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { Wrapper, HeaderWrapper, NavBar, NavItem, Logo, StyledLink } from './styled';
+import { Wrapper, HeaderWrapper, NavBar, NavLogoItem, NavItem, Logo, StyledLink } from './styled';
 
 const Header = () => (
   <Wrapper>
     <HeaderWrapper>
       <NavBar>
-        <NavItem isLogo>
+        <NavLogoItem>
           <StyledLink to="/">
             <Logo>MJ</Logo>
           </StyledLink>
-        </NavItem>
+        </NavLogoItem>
         <NavItem>
           <StyledLink to="/games">Games</StyledLink>
         </NavItem>

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import Heading from 'components/Text/Heading';
 
 export const Wrapper = styled.div(
   ({ theme: { breakpoints } }) => css`
@@ -13,6 +14,7 @@ export const Wrapper = styled.div(
 
 export const StyledText = styled.span(
   ({ theme: { colors } }) => css`
+    text-transform: uppercase;
     font-style: italic;
     color: ${colors.purple};
   `
@@ -23,8 +25,13 @@ export const HeadingWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 45rem;
+  text-align: center;
   line-height: 3.7rem;
 `;
+
+export const CustomHeading = styled(Heading)`
+  text-transform: uppercase;
+`
 
 export const PartnersWrapper = styled.div`
   display: flex;

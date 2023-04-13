@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import theme from 'styles/theme';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -16,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background-color: #161e30;
+    background-color: ${theme.colors.baseBackground};
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
