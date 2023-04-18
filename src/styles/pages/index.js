@@ -39,6 +39,10 @@ export const HeadingWrapper = styled.div`
 
 export const StarsImage = styled.div``;
 
+export const CarouselSection = styled.section`
+  margin-bottom: 6rem;
+`;
+
 export const RoadmapSection = styled.div`
   padding-bottom: 7rem;
 `;

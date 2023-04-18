@@ -4,6 +4,7 @@ import RegularText from 'components/Text/RegularText';
 import Button from 'components/Button/Button';
 import { ThemeProvider } from 'styled-components';
 import { data } from 'data/mainBlockData';
+import Carousel from 'components/Carousel/Carousel';
 
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
@@ -15,7 +16,7 @@ import MainBlock from 'components/MainBlock/MainBlock';
 import ProjectInfoBlock from 'components/ProjectInfoBlock/ProjectInfoBlock';
 import AboutBlock from 'components/AboutBlock/AboutBlock';
 
-import { PageWrapper, RoadmapSection, TextContainer, customButtonStyles } from 'styles/pages/index';
+import { PageWrapper, RoadmapSection, TextContainer, CarouselSection, customButtonStyles } from 'styles/pages/index';
 
 const Index = () => (
   <ThemeProvider theme={theme}>
@@ -39,6 +40,9 @@ const Index = () => (
               </Button>
             </Link>
           </section>
+          <CarouselSection>
+            <Carousel />
+          </CarouselSection>
           <section>
             <ProjectInfoBlock />
           </section>
