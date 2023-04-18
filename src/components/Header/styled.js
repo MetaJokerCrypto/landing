@@ -17,15 +17,11 @@ export const HeaderWrapper = styled.div(
     @media (max-width: ${breakpoints.md}) {
       padding: 1rem 2rem;
     }
-
-    @media (max-width: ${breakpoints.sm}) {
-      padding: 1rem;
-    }
   `
 );
 
 export const NavBar = styled.ul(
-  ({ theme: { fontSize } }) => css`
+  ({ theme: { breakpoints, fontSize } }) => css`
     display: grid;
     gap: 1rem;
     align-items: center;
@@ -34,6 +30,24 @@ export const NavBar = styled.ul(
     max-width: 1332px;
     grid-template-columns: repeat(7, 1fr);
     font-size: ${fontSize.sm};
+
+    @media (max-width: ${breakpoints.sm}) {
+      display: none;
+    }
+  `
+);
+
+export const MobileNavBar = styled.ul(
+  ({ theme: { breakpoints, fontSize } }) => css`
+    display: none;
+
+    @media (max-width: ${breakpoints.sm}) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
   `
 );
 
@@ -63,10 +77,16 @@ export const Logo = styled.span(
   `
 );
 
-export const NavLogoItem = styled(NavItem)`
-  justify-self: start;
-  grid-column: 1/4;
-`;
+export const NavLogoItem = styled(NavItem)(
+  ({ theme: { breakpoints } }) => css`
+    justify-self: start;
+    grid-column: 1/4;
+
+    @media (max-width: ${breakpoints.sm}) {
+      grid-column: 1;
+    }
+  `
+);
 
 export const StyledLink = styled(Link)(
   ({ theme: { breakpoints, colors, fontSize } }) => css`
