@@ -1,13 +1,19 @@
 import styled, { css } from 'styled-components';
 
-export const PartnersWrapper = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-bottom: 4rem;
-  padding: 0;
-  list-style: none;
-`;
+export const PartnersWrapper = styled.ul(
+  ({ theme: { breakpoints } }) => css`
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: ${breakpoints.md}) {
+      flex-direction: column;
+    }
+  `
+);
 
 export const PartnerLink = styled.a(
   ({ theme: { colors, fontSize } }) => css`

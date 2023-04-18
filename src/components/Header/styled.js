@@ -17,18 +17,22 @@ export const HeaderWrapper = styled.div(
     @media (max-width: ${breakpoints.md}) {
       padding: 1rem 2rem;
     }
+
+    @media (max-width: ${breakpoints.sm}) {
+      padding: 1rem;
+    }
   `
 );
 
 export const NavBar = styled.ul(
   ({ theme: { fontSize } }) => css`
     display: grid;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: center;
     margin: 0 auto;
     padding: 0;
     max-width: 1332px;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     font-size: ${fontSize.sm};
   `
 );
@@ -61,7 +65,7 @@ export const Logo = styled.span(
 
 export const NavLogoItem = styled(NavItem)`
   justify-self: start;
-  grid-column: 1/3;
+  grid-column: 1/4;
 `;
 
 export const StyledLink = styled(Link)(
