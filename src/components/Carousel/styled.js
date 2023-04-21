@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Swiper } from 'swiper/react';
 
 export const SwiperWrapper = styled(Swiper)`
@@ -26,6 +26,7 @@ export const SlideCard = styled.div`
 
   img {
     max-width: 200px;
+    cursor: pointer;
   }
 
   @media (max-width: 22rem) {
@@ -34,3 +35,25 @@ export const SlideCard = styled.div`
     }
   }
 `;
+
+export const ModalWrapper = styled.div(
+  ({ theme: { breakpoints } }) => css`
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 6rem;
+
+    @media (max-width: ${breakpoints.sm}) {
+      padding: 0;
+    }
+  `
+)
+
+export const ModalLink = styled.a(
+  ({ theme: { colors, fontSize } }) => css`
+    display: inline-block;
+    margin: 2rem auto 0;
+    color: ${colors.white};
+    font-size: ${fontSize.md};
+    text-underline-offset: 0.3rem;
+  `
+);

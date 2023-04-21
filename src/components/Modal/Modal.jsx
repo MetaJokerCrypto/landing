@@ -1,6 +1,5 @@
 import React, { useRef, forwardRef, useImperativeHandle } from 'react';
 import Modal from 'react-modal';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 const customStyles = {
   overlay: {
@@ -19,6 +18,7 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    backgroundColor: 'rgb(19, 30, 55)',
     zIndex: '1000'
   }
 };
@@ -30,14 +30,7 @@ const ModalComponent = forwardRef(({ isOpenModal, closeModal, children }, ref) =
   useImperativeHandle(ref, () => modalRef.current, [modalRef]);
 
   return (
-    <Modal
-      isOpen={isOpenModal}
-      onRequestClose={closeModal}
-      style={customStyles}
-      ref={modalRef}
-      onAfterOpen={disableBodyScroll(modalRef.current)}
-      onAfterClose={enableBodyScroll(modalRef.current)}
-    >
+    <Modal isOpen={isOpenModal} onRequestClose={closeModal} style={customStyles} ariaHideApp={false} ref={modalRef}>
       {children}
     </Modal>
   );

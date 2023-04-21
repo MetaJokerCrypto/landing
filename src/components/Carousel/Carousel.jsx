@@ -7,43 +7,59 @@ import { data } from 'data/cardsData';
 import 'swiper/css/navigation';
 import 'swiper/swiper.min.css';
 
-import { SwiperWrapper, SlideCard } from './styled';
+import { SwiperWrapper, SlideCard, ModalWrapper, ModalLink } from './styled';
 
 const Carousel = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
+  const [modalDataState, setModalDataState] = useState(null);
 
-  const openModal = () => setIsOpenModal(true);
+  const openModal = (modalData) => {
+    setModalDataState(modalData);
+    setIsOpenModal(true);
+  };
   const closeModal = () => setIsOpenModal(false);
 
   return (
-    <SwiperWrapper
-      spaceBetween={20}
-      slidesPerView={1}
-      modules={[Navigation]}
-      breakpoints={{
-        695: {
-          slidesPerView: 2
-        },
-        1000: {
-          slidesPerView: 3
-        }
-      }}
-      navigation
-      loop>
-      {data.map(({ id, previewImage }) => (
-        <>
-          <SwiperSlide>
-            <SlideCard key={id} onClick={openModal}>
-              <img src={previewImage} alt="1" />
-            </SlideCard>
-          </SwiperSlide>
-          <ModalComponent isOpenModal={isOpenModal} closeModal={closeModal}>
-            <img src={previewImage} alt="1" />
-            <button>Купить</button>
-          </ModalComponent>
-        </>
-      ))}
-    </SwiperWrapper>
+    <>
+      <SwiperWrapper
+        spaceBetween={20}
+        slidesPerView={1}
+        modules={[Navigation]}
+        breakpoints={{
+          695: {
+            slidesPerView: 2
+          },
+          1000: {
+            slidesPerView: 3
+          }
+        }}
+        navigation
+        loop
+      >
+        {data.map(({ id, previewImage, openSeaLink }) => {
+          const modalData = {
+            previewImage,
+            openSeaLink
+          };
+
+          return (
+            <SwiperSlide key={id}>
+              <SlideCard key={id} onClick={() => openModal(modalData)}>
+                <img src={previewImage} alt="1" />
+              </SlideCard>
+            </SwiperSlide>
+          );
+        })}
+      </SwiperWrapper>
+      <ModalComponent isOpenModal={isOpenModal} closeModal={closeModal}>
+        <ModalWrapper>
+          <img src={modalDataState?.previewImage} alt="1" />
+          <ModalLink href={modalDataState?.openSeaLink} target="_blank">
+            Перейти на OpenSea
+          </ModalLink>
+        </ModalWrapper>
+      </ModalComponent>
+    </>
   );
 };
 
