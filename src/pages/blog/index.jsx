@@ -10,7 +10,7 @@ import Layout from 'components/Layout/Layout';
 import ArticleCard from 'components/ArticleCard/ArticleCard';
 import Heading from 'components/Text/Heading';
 
-import { Wrapper, List, StyledLink } from 'styles/pages/blog';
+import { Wrapper, CardList, StyledLink } from 'styles/pages/blog';
 
 const BlogPage = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
@@ -21,15 +21,17 @@ const BlogPage = ({ data }) => {
       <Layout>
         <Wrapper>
           <Heading type="h2">Статьи</Heading>
-          <List>
+          <CardList>
             {posts.map(({ frontmatter, fields }, index) => {
               return (
-                <StyledLink to={fields.slug}>
-                  <ArticleCard key={index} slug={fields.slug} title={frontmatter.title} date={frontmatter.date} />
-                </StyledLink>
+                <li key={index}>
+                  <StyledLink to={fields.slug}>
+                    <ArticleCard key={index} slug={fields.slug} title={frontmatter.title} date={frontmatter.date} />
+                  </StyledLink>
+                </li>
               );
             })}
-          </List>
+          </CardList>
         </Wrapper>
       </Layout>
     </ThemeProvider>

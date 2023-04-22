@@ -2,16 +2,15 @@ import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 
 export const Wrapper = styled.div`
-  padding: 7rem 10rem 0;
+  padding-top: 7rem;
   margin-bottom: 5rem;
 `;
 
-export const List = styled.ol(
+export const CardList = styled.ol(
   ({ theme: { breakpoints } }) => css`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4rem 1rem;
-    justify-items: center;
+    gap: 4rem 5rem;
     padding: 0;
     list-style: none;
 

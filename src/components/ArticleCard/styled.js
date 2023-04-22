@@ -4,7 +4,6 @@ import Link from 'gatsby-link';
 export const Wrapper = styled.div(
   ({ theme: { breakpoints } }) => css`
     width: 100%;
-    max-width: 20rem;
     border: 1px solid white;
 
     @media (max-width: ${breakpoints.md}) {
