@@ -22,15 +22,19 @@ const BlogPage = ({ data }) => {
         <Wrapper>
           <Heading type="h2">Статьи</Heading>
           <CardList>
-            {posts.map(({ frontmatter, fields }, index) => {
-              return (
-                <li key={index}>
-                  <StyledLink to={fields.slug}>
-                    <ArticleCard key={index} slug={fields.slug} title={frontmatter.title} date={frontmatter.date} />
-                  </StyledLink>
-                </li>
-              );
-            })}
+            {posts.map(({ frontmatter, fields }, index) => (
+              <li key={index}>
+                <StyledLink to={fields?.slug}>
+                  <ArticleCard
+                    key={index}
+                    slug={fields.slug}
+                    previewImage={frontmatter.previewImage}
+                    title={frontmatter.title}
+                    date={frontmatter.date}
+                  />
+                </StyledLink>
+              </li>
+            ))}
           </CardList>
         </Wrapper>
       </Layout>
@@ -57,6 +61,11 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          previewImage {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
       }
     }

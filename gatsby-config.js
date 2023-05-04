@@ -89,6 +89,9 @@ module.exports = {
                     frontmatter {
                       title
                       date
+                      previewImage {
+                        relativePath
+                      }
                     }
                   }
                 }

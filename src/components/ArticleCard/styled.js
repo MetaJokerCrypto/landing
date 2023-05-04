@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import Link from 'gatsby-link';
 
 export const Wrapper = styled.div(
   ({ theme: { breakpoints } }) => css`
@@ -30,12 +29,5 @@ export const Date = styled.span(
   ({ theme: { colors, fontSize } }) => css`
     font-size: ${fontSize.xs};
     color: ${colors.white};
-  `
-);
-
-export const StyledLink = styled(Link)(
-  ({ theme: { colors } }) => css`
-    text-decoration: none;
-    color: ${colors.pink};
   `
 );
