@@ -5,14 +5,16 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
 collections:
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
     create: true
-    slug:
-      encoding: "ascii"
-      clean_accents: true
+    slug: "{{slug}}"
     media_folder: ""
     public_folder: ""
     path: "{{slug}}/index"
@@ -25,9 +27,8 @@ collections:
         name: "topics"
         widget: "select"
         options:
-        - { label: "All", value: 'all' }
-        - { label: "Fundamental", value: 'fundamental' }
-        - { label: "Meta-psychology", value: 'psychology' }
+        - { label: "Fundamental", value: "fundamental" }
+        - { label: "Meta-psychology", value: "psychology" }
         - { label: "Knowlege and tech", value: "knowlege" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Preview Image", name: "previewImage", widget: "image"}

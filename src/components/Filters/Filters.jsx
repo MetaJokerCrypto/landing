@@ -1,7 +1,10 @@
 import React from 'react';
+import Button from 'components/Button/Button';
 
 const Filters = () => (
-  <>hfhf</>
+  <>
+    <Button>В</Button>
+  </>
 )
 
 export default Filters
