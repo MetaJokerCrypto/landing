@@ -10,7 +10,9 @@ collections:
     label: "Blog"
     folder: "content/blog"
     create: true
-    slug: "{{slug}}"
+    slug:
+      encoding: "ascii"
+      clean_accents: true
     media_folder: ""
     public_folder: ""
     path: "{{slug}}/index"
@@ -18,9 +20,13 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug (in english)", name: "slug", widget: "string"}
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Topics", name: "topics", widget: "list" }
+      - {label: Topics, name: tags, widget: select, options:
+        - { label: "All", value: 'All' }
+        - { label: "Fundamental", value: 'Fundamental' }
+        - { label: "Meta-psychology", value: 'Meta-psychology' }
+        - { label: "Knowlege and tech", value: "Knowlege and tech" }
+      }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Preview Image", name: "previewImage", widget: "image"}
       - { label: "Body", name: "body", widget: "markdown" }
