@@ -2,6 +2,9 @@
 title: Здоровье
 date: 2022-01-27T11:19:59.130Z
 preview_image: sanitas.svg
+topics: fundamental
+description: Здоровье
+previewImage: sanitas.svg
 ---
 
 “Mens sana in corpore sano!”
