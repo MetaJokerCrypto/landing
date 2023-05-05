@@ -1,5 +1,6 @@
 ---
 title: Дисциплина
+slug: discipline
 date: 2022-01-27T15:59:00.000Z
 description: Disciplina
 previewImage: pexels-pixabay-531880.jpg
