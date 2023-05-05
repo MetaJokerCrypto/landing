@@ -21,12 +21,14 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - {label: Topics, name: tags, widget: select, options:
-        - { label: "All", value: 'All' }
-        - { label: "Fundamental", value: 'Fundamental' }
-        - { label: "Meta-psychology", value: 'Meta-psychology' }
-        - { label: "Knowlege and tech", value: "Knowlege and tech" }
-      }
+      - label: "Topics"
+        name: "topics"
+        widget: "select"
+        options:
+        - { label: "All", value: 'all' }
+        - { label: "Fundamental", value: 'fundamental' }
+        - { label: "Meta-psychology", value: 'psychology' }
+        - { label: "Knowlege and tech", value: "knowlege" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Preview Image", name: "previewImage", widget: "image"}
       - { label: "Body", name: "body", widget: "markdown" }
