@@ -27,7 +27,7 @@ const MobileMenu = ({ isOpen, handleMenuToggle }) => {
       <NavMobile>
         <NavMobileList>
           <MobileMenuItem>
-            <StyledLink to="/games">Games</StyledLink>
+            <StyledLink to="/games">Мета-коллекции</StyledLink>
           </MobileMenuItem>
           <MobileMenuItem>
             <StyledLink to="/blog">Блог</StyledLink>
