@@ -6,6 +6,8 @@ import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 
 import Layout from 'components/Layout/Layout';
+import Heading from 'components/Text/Heading';
+import Collections from 'components/Collections/Collections';
 
 import { Wrapper, ListWrapper, Game, GameTitle, StyledLink } from 'styles/pages/games';
 
@@ -15,7 +17,9 @@ const GamesPage = () => {
       <GlobalStyles />
       <Layout>
         <Wrapper>
-          <ListWrapper>
+          <Heading type="h1">Мета-коллекции</Heading>
+          <Collections isSliderType />
+          {/* <ListWrapper>
             <StyledLink to="/games/joker-smile">
               <Game active>
                 <GameTitle>Joker Smile</GameTitle>
@@ -24,7 +28,7 @@ const GamesPage = () => {
             <Game>
               <GameTitle>Coming soon...</GameTitle>
             </Game>
-          </ListWrapper>
+          </ListWrapper> */}
         </Wrapper>
       </Layout>
     </ThemeProvider>

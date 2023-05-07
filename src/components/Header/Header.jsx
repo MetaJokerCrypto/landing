@@ -22,7 +22,7 @@ const Header = () => {
               </StyledLink>
             </NavLogoItem>
             <NavItem>
-              <StyledLink to="/games">Games</StyledLink>
+              <StyledLink to="/games">Мета-коллекции</StyledLink>
             </NavItem>
             <NavItem>
               <StyledLink to="/blog">Блог</StyledLink>

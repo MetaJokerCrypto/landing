@@ -60,7 +60,7 @@ const Wrapper = styled.div(
     transition: all 0.3s ease-out;
     pointer-events: ${!isOpen && 'none'};
     opacity: ${isOpen ? '1' : '0'};
-    background-color: ${colors.roadmap};
+    background-color: ${colors.textArea};
   `
 );
 

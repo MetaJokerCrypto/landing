@@ -1,31 +1,45 @@
 import styled, { css } from 'styled-components';
 
+export const CardWrapper = styled.div(
+  ({ theme: { breakpoints } }) => css`
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: ${breakpoints.md}) {
+      flex-direction: column;
+      align-items: center;
+    }
+  `
+);
+
 export const TitleWrapper = styled.div`
   margin-bottom: 2rem;
   font-size: 46px;
   font-weight: 700;
 `;
 
-export const Number = styled.span`
-  margin-right: 1.5rem;
-`;
+export const Title = styled.span(
+  ({ theme: { breakpoints, fontSize } }) => css`
+    font-size: ${fontSize.xl};
+
+    @media (max-width: ${breakpoints.md}) {
+      font-size: ${fontSize.lg};
+    }
+  `
+);
 
 export const Image = styled.img`
   display: block;
   width: 100%;
-  max-width: 453px;
-`;
-
-export const CardWrapper = styled.div`
-  display: flex;
-  gap: 5rem;
-  margin-bottom: 2rem;
+  max-width: 380px;
 `;
 
 export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 4rem;
+  font-style: italic;
   gap: 2rem;
 `;
 

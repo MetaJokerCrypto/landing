@@ -8,7 +8,7 @@ export default {
     darkBlue: '#19275e',
     header: '#1C263D',
     footer: '#1C263D',
-    roadmap: '#202A46',
+    textArea: '#202A46',
     accentColor: '#fcf6a9c7',
     baseBackground: '#161e30'
   },
@@ -20,7 +20,7 @@ export default {
     md2: '1.5rem',
     lg: '2rem',
     xl: '2.5rem',
-    xxl: '4.5rem'
+    xxl: '3.3rem'
   },
 
   breakpoints: {

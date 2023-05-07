@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
+import Heading from 'components/Text/Heading';
 
 import Layout from 'components/Layout/Layout';
 import Collections from 'components/Collections/Collections';
@@ -16,6 +17,7 @@ const CollectionPage = () => {
       <GlobalStyles />
       <Layout>
         <Section>
+          <Heading type="h1">Коллекция</Heading>
           <Collections />
         </Section>
       </Layout>

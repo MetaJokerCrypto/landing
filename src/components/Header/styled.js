@@ -38,7 +38,7 @@ export const NavBar = styled.ul(
 );
 
 export const MobileNavBar = styled.ul(
-  ({ theme: { breakpoints, fontSize } }) => css`
+  ({ theme: { breakpoints } }) => css`
     display: none;
 
     @media (max-width: ${breakpoints.sm}) {

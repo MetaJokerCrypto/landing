@@ -86,7 +86,7 @@ export const Event = styled.div(
     margin: 3.75rem 0 0 4rem;
     border-radius: 0.4rem;
     transition: all 0.3s ease-in-out;
-    background-color: ${colors.roadmap};
+    background-color: ${colors.textArea};
     color: ${colors.white};
 
     &:before {
