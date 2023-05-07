@@ -92,6 +92,7 @@ module.exports = {
                       previewImage {
                         relativePath
                       }
+                      topics
                     }
                   }
                 }

@@ -29,3 +29,27 @@ export const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
 `;
+
+
+export const FiltersWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+`;
+
+export const customFilterStyles = ({ theme: { colors, fontSize } }) => css`
+  width: 15rem;
+  margin-right: 2rem;
+  padding: 0.5em 2em;
+  font-size: ${fontSize.sm};
+  font-weight: 400;
+  color: ${colors.gray};
+  border-radius: 2rem;
+  background: ${colors.white};
+  opacity: 0.8;
+  transition: all 0.3ms;
+
+  &:hover {
+    opacity: 1;
+  }
+`;
