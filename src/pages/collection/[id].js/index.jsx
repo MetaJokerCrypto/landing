@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
+import SEO from 'components/SEO/SEO';
 
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
@@ -31,3 +32,5 @@ const CollectionCardPage = ({ location }) => {
 };
 
 export default CollectionCardPage;
+
+export const Head = () => <SEO />;

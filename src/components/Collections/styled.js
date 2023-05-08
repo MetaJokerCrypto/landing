@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-  margin-right: 4rem;
 `;
 
 export const Button = styled.button(
@@ -20,20 +19,34 @@ export const Button = styled.button(
   `
 );
 
-export const SliderCardsWrapper = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-bottom: 3rem;
-`;
+export const SliderCardsWrapper = styled.div(
+  ({ theme: { breakpoints } }) => css`
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+    justify-content: center;
+    padding-bottom: 7rem;
+
+    @media (max-width: ${breakpoints.lg}) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: ${breakpoints.md}) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: ${breakpoints.sm}) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  `
+);
 
 export const SliderCard = styled.div`
-  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
 
 export const CardImage = styled.img`
-  width: 12rem;
+  width: 100%;
 `;

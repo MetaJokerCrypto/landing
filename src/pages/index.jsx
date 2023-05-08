@@ -5,7 +5,7 @@ import Button from 'components/Button/Button';
 import { ThemeProvider } from 'styled-components';
 import { data } from 'data/mainBlockData';
 import Carousel from 'components/Carousel/Carousel';
-
+import SEO from 'components/SEO/SEO';
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 
@@ -59,3 +59,5 @@ const Index = () => (
 );
 
 export default Index;
+
+export const Head = () => <SEO />;

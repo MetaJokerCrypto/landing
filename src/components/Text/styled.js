@@ -12,7 +12,7 @@ export const P = styled.p(
 
 export const H1 = styled.h1(
   ({ theme: { breakpoints, fontSize }, customStyles }) => css`
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
     font-size: ${fontSize.xxl};
     line-height: 1.3;
     text-transform: uppercase;

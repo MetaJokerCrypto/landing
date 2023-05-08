@@ -20,7 +20,7 @@ export default {
     md2: '1.5rem',
     lg: '2rem',
     xl: '2.5rem',
-    xxl: '3.3rem'
+    xxl: '3rem'
   },
 
   breakpoints: {

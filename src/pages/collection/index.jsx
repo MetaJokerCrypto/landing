@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import SEO from 'components/SEO/SEO';
+
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyles from 'styles/global';
@@ -26,3 +28,5 @@ const CollectionPage = () => {
 };
 
 export default CollectionPage;
+
+export const Head = () => <SEO />;

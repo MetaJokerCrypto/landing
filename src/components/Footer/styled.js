@@ -17,7 +17,7 @@ export const Wrapper = styled.div(
   `
 );
 
-export const LinksList = styled.ul(
+export const List = styled.ul(
   ({ theme: { breakpoints } }) => css`
     display: flex;
     padding: 0;
@@ -31,7 +31,7 @@ export const LinksList = styled.ul(
   `
 );
 
-export const LinkItem = styled.li(
+export const Item = styled.li(
   ({ theme: { breakpoints } }) => css`
     &:not(:last-child) {
       margin-right: 40px;
@@ -43,5 +43,12 @@ export const LinkItem = styled.li(
         margin-bottom: 15px;
       }
     }
+  `
+);
+
+export const Link = styled.a(
+  ({ theme: { colors } }) => css`
+    color: ${colors.white};
+    text-decoration: none;
   `
 );

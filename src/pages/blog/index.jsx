@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import SEO from 'components/SEO/SEO';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -20,7 +21,7 @@ const BlogPage = ({ data }) => {
       <GlobalStyles />
       <Layout>
         <Wrapper>
-          <Heading type="h2">Статьи</Heading>
+          <Heading type="h1">Статьи</Heading>
           <CardList>
             {posts.map(({ frontmatter, fields }, index) => (
               <li key={index}>
@@ -71,3 +72,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export const Head = () => <SEO />;

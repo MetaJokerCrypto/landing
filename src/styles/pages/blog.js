@@ -2,8 +2,9 @@ import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 
 export const Wrapper = styled.div`
-  padding-top: 7rem;
-  margin-bottom: 5rem;
+  max-width: 60rem;
+  padding-top: 8rem;
+  margin: 0 auto 5rem;
 `;
 
 export const CardList = styled.ol(

@@ -6,6 +6,14 @@ import previewImage_5 from 'images/card-sm-5.png';
 import previewImage_6 from 'images/card-sm-6.png';
 import previewImage_7 from 'images/card-sm-7.png';
 
+import previewVideo_1 from 'images/video_red_1.mp4';
+import previewVideo_2 from 'images/video_orange_2.mp4';
+import previewVideo_3 from 'images/video_yellow_3.mp4';
+import previewVideo_4 from 'images/video_green_4.mp4';
+import previewVideo_5 from 'images/video_lblue_5.mp4';
+import previewVideo_6 from 'images/video_blue_6.mp4';
+import previewVideo_7 from 'images/video_purple_7.mp4';
+
 import image_1 from 'images/card-lg-1.jpeg';
 import image_2 from 'images/card-lg-2.jpeg';
 import image_3 from 'images/card-lg-3.jpeg';
@@ -14,12 +22,22 @@ import image_5 from 'images/card-lg-5.jpeg';
 import image_6 from 'images/card-lg-6.jpeg';
 import image_7 from 'images/card-lg-7.jpeg';
 
+import alt_card_1 from 'images/alt_card_1.jpg';
+import alt_card_2 from 'images/alt_card_2.jpg';
+import alt_card_3 from 'images/alt_card_3.jpg';
+import alt_card_4 from 'images/alt_card_4.jpg';
+import alt_card_5 from 'images/alt_card_5.jpg';
+import alt_card_6 from 'images/alt_card_6.jpg';
+import alt_card_7 from 'images/alt_card_7.jpg';
+
 export const data = [
   {
     id: '1',
     color: '#d41717',
     path: '/collection/1',
     previewImage: previewImage_1,
+    previewVideo: previewVideo_1,
+    altPreviewImage: alt_card_1,
     image: image_1,
     name: 'Материальный',
     description: [
@@ -37,6 +55,8 @@ export const data = [
     color: '#c76a00',
     path: '/collection/2',
     previewImage: previewImage_2,
+    previewVideo: previewVideo_2,
+    altPreviewImage: alt_card_2,
     name: 'Социальный',
     image: image_2,
     description: [
@@ -55,6 +75,8 @@ export const data = [
     name: 'Интеллект',
     image: image_3,
     previewImage: previewImage_3,
+    previewVideo: previewVideo_3,
+    altPreviewImage: alt_card_3,
     description: [
       'RAM - Манипура (чакра солнечного сплетения)',
       'Мантра РАМ. Звук - МИ. Цвет - желто-лимонный. Запах - мяты. Вкус - перец жжет кончик языка. Ощущение - тепло',
@@ -69,6 +91,8 @@ export const data = [
     color: '#02b32e',
     path: '/collection/4',
     previewImage: previewImage_4,
+    previewVideo: previewVideo_4,
+    altPreviewImage: alt_card_4,
     name: 'Эмоции',
     image: image_4,
     description: [
@@ -85,6 +109,8 @@ export const data = [
     color: '#0aa6a6',
     path: '/collection/5',
     previewImage: previewImage_5,
+    previewVideo: previewVideo_5,
+    altPreviewImage: alt_card_5,
     name: 'Идеи',
     image: image_5,
     description: [
@@ -101,6 +127,8 @@ export const data = [
     color: '#092e94',
     path: '/collection/6',
     previewImage: previewImage_6,
+    previewVideo: previewVideo_6,
+    altPreviewImage: alt_card_6,
     name: 'Интуиция',
     image: image_6,
     description: [
@@ -118,6 +146,8 @@ export const data = [
     path: '/collection/7',
     name: 'Духовность',
     previewImage: previewImage_7,
+    previewVideo: previewVideo_7,
+    altPreviewImage: alt_card_7,
     image: image_7,
     description: [
       'AUM - Сахасрара (чакра темени)',

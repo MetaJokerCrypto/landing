@@ -36,16 +36,16 @@ const Carousel = () => {
         navigation
         loop
       >
-        {data.map(({ id, previewImage, openSeaLink }) => {
+        {data.map(({ id, altPreviewImage, previewVideo, openSeaLink }) => {
           const modalData = {
-            previewImage,
+            previewVideo,
             openSeaLink
           };
 
           return (
             <SwiperSlide key={id}>
               <SlideCard key={id} onClick={() => openModal(modalData)}>
-                <img src={previewImage} alt="1" />
+                <img src={altPreviewImage} alt="1" />
               </SlideCard>
             </SwiperSlide>
           );
@@ -53,7 +53,7 @@ const Carousel = () => {
       </SwiperWrapper>
       <ModalComponent isOpenModal={isOpenModal} closeModal={closeModal}>
         <ModalWrapper>
-          <img src={modalDataState?.previewImage} alt="1" />
+          <video src={modalDataState?.previewVideo} autoPlay loop width="300" />
           <ModalLink href={modalDataState?.openSeaLink} target="_blank">
             Перейти на OpenSea
           </ModalLink>
