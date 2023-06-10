@@ -1,14 +1,11 @@
 import React from 'react';
-
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
-
-import { Wrapper, Container } from './styled';
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
@@ -23,3 +20,15 @@ const Layout = ({ children }) => (
 );
 
 export default Layout;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+`;
+
+export const Container = styled.div`
+  padding: 0 32px;
+`;

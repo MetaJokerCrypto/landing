@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-
-import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
-import Link from 'gatsby-link';
 import styled, { css } from 'styled-components';
+import Link from 'gatsby-link';
+import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 
 const MobileMenu = ({ isOpen, handleMenuToggle }) => {
   const menuRef = useRef(null);
@@ -27,7 +26,7 @@ const MobileMenu = ({ isOpen, handleMenuToggle }) => {
       <NavMobile>
         <NavMobileList>
           <MobileMenuItem>
-            <StyledLink to="/games">Мета-коллекции</StyledLink>
+            <StyledLink to="/collections">Мета-коллекции</StyledLink>
           </MobileMenuItem>
           <MobileMenuItem>
             <StyledLink to="/blog">Блог</StyledLink>
@@ -86,24 +85,22 @@ const NavMobileList = styled.ul`
   padding: 0;
 `;
 
-const MobileMenuItem = styled.li(
-  ({ theme: { colors } }) => css`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
+const MobileMenuItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
 
-    &:not(:last-child) {
-      &::after {
-        width: 3px;
-        height: 3px;
-        margin: 16px auto 19px;
-        content: '';
-        border-radius: 50%;
-      }
+  &:not(:last-child) {
+    &::after {
+      width: 3px;
+      height: 3px;
+      margin: 16px auto 19px;
+      content: '';
+      border-radius: 50%;
     }
-  `
-);
+  }
+`;
 
 export const StyledLink = styled(Link)(
   ({ theme: { breakpoints, colors, fontSize } }) => css`

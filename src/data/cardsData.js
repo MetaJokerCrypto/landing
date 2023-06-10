@@ -34,7 +34,7 @@ export const data = [
   {
     id: '1',
     color: '#d41717',
-    path: '/collection/1',
+    path: '/collections/1',
     previewImage: alt_card_1,
     previewVideo: previewVideo_1,
     altPreviewImage: alt_card_1,
@@ -53,7 +53,7 @@ export const data = [
   {
     id: '2',
     color: '#c76a00',
-    path: '/collection/2',
+    path: '/collections/2',
     previewImage: alt_card_2,
     previewVideo: previewVideo_2,
     altPreviewImage: alt_card_2,
@@ -71,7 +71,7 @@ export const data = [
   {
     id: '3',
     color: '#d1b500',
-    path: '/collection/3',
+    path: '/collections/3',
     name: 'Интеллект',
     image: image_3,
     previewImage: alt_card_3,
@@ -89,7 +89,7 @@ export const data = [
   {
     id: '4',
     color: '#02b32e',
-    path: '/collection/4',
+    path: '/collections/4',
     previewImage: alt_card_4,
     previewVideo: previewVideo_4,
     altPreviewImage: alt_card_4,
@@ -107,7 +107,7 @@ export const data = [
   {
     id: '5',
     color: '#0aa6a6',
-    path: '/collection/5',
+    path: '/collections/5',
     previewImage: alt_card_5,
     previewVideo: previewVideo_5,
     altPreviewImage: alt_card_5,
@@ -125,7 +125,7 @@ export const data = [
   {
     id: '6',
     color: '#092e94',
-    path: '/collection/6',
+    path: '/collections/6',
     previewImage: alt_card_6,
     previewVideo: previewVideo_6,
     altPreviewImage: alt_card_6,
@@ -143,7 +143,7 @@ export const data = [
   {
     id: '7',
     color: '#500573',
-    path: '/collection/7',
+    path: '/collections/7',
     name: 'Духовность',
     previewImage: alt_card_7,
     previewVideo: previewVideo_7,

@@ -1,16 +1,13 @@
 import * as React from 'react';
-import SEO from 'components/SEO/SEO';
-
-import { ThemeProvider } from 'styled-components';
+import styled, { css, ThemeProvider } from 'styled-components';
 
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 
+import SEO from 'components/SEO/SEO';
 import Layout from 'components/Layout/Layout';
 import Heading from 'components/Text/Heading';
 import RegularText from 'components/Text/RegularText';
-
-import { Container, Section, DotList, ListItem } from 'styles/pages/about';
 
 const About = () => (
   <ThemeProvider theme={theme}>
@@ -160,3 +157,24 @@ const About = () => (
 export default About;
 
 export const Head = () => <SEO />;
+
+const Container = styled.div`
+  max-width: 60rem;
+  margin: 0 auto;
+  padding-top: 8rem;
+`;
+
+const Section = styled.section`
+  margin-bottom: 3rem;
+`;
+
+const DotList = styled.ul(
+  ({ theme: { fontSize } }) => css`
+    font-size: ${fontSize.sm};
+    line-height: 1.4rem;
+  `
+);
+
+const ListItem = styled.li`
+  margin-bottom: 0.6rem;
+`;

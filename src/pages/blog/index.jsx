@@ -1,17 +1,14 @@
 import * as React from 'react';
-import { graphql } from 'gatsby';
-import SEO from 'components/SEO/SEO';
-
-import { ThemeProvider } from 'styled-components';
+import { graphql, Link } from 'gatsby';
+import styled, { css, ThemeProvider } from 'styled-components';
 
 import theme from 'styles/theme';
 import GlobalStyles from 'styles/global';
 
+import SEO from 'components/SEO/SEO';
 import Layout from 'components/Layout/Layout';
 import ArticleCard from 'components/ArticleCard/ArticleCard';
 import Heading from 'components/Text/Heading';
-
-import { Wrapper, CardList, StyledLink } from 'styles/pages/blog';
 
 const BlogPage = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
@@ -45,6 +42,38 @@ const BlogPage = ({ data }) => {
 
 export default BlogPage;
 
+export const Head = () => <SEO />;
+
+const Wrapper = styled.div`
+  max-width: 60rem;
+  padding-top: 8rem;
+  margin: 0 auto 5rem;
+`;
+
+const CardList = styled.ol(
+  ({ theme: { breakpoints } }) => css`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 5rem;
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: ${breakpoints.lg}) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: ${breakpoints.md}) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  `
+);
+
+const StyledLink = styled(Link)`
+  width: 100%;
+  color: white;
+  text-decoration: none;
+`;
+
 export const pageQuery = graphql`
   query {
     site {
@@ -72,5 +101,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-export const Head = () => <SEO />;

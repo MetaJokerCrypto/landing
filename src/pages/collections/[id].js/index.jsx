@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+
 import SEO from 'components/SEO/SEO';
 
 import GlobalStyles from 'styles/global';
@@ -10,8 +11,6 @@ import { data } from 'data/cardsData';
 import CollectionCard from 'components/CollectionCard/CollectionCard';
 
 import Layout from 'components/Layout/Layout';
-
-import { Section } from 'styles/pages/collectionCard';
 
 const CollectionCardPage = ({ location }) => {
   const currentPath = location.pathname;
@@ -34,3 +33,10 @@ const CollectionCardPage = ({ location }) => {
 export default CollectionCardPage;
 
 export const Head = () => <SEO />;
+
+const Section = styled.section`
+  height: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 10rem 0 5rem;
+`;

@@ -1,6 +1,5 @@
 import * as React from 'react';
-
-import { ThemeProvider } from 'styled-components';
+import styled, { css, ThemeProvider } from 'styled-components';
 
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
@@ -9,8 +8,6 @@ import SEO from 'components/SEO/SEO';
 import Layout from 'components/Layout/Layout';
 import Heading from 'components/Text/Heading';
 import RegularText from 'components/Text/RegularText';
-
-import { Wrapper, Link, Section } from 'styles/pages/p2b';
 
 const P2B = () => (
   <ThemeProvider theme={theme}>
@@ -81,3 +78,19 @@ const P2B = () => (
 export default P2B;
 
 export const Head = () => <SEO />;
+
+const Wrapper = styled.div`
+  max-width: 60rem;
+  margin: 0 auto;
+  padding-top: 8rem;
+`;
+
+const Section = styled.section`
+  margin-bottom: 5rem;
+`;
+
+const Link = styled.a(
+  ({ theme: { colors } }) => css`
+    color: ${colors.purple};
+  `
+);

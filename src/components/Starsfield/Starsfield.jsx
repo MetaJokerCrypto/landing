@@ -1,8 +1,13 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 
+const Starsfield = () => <Starfield />;
+
+export default Starsfield;
+
 const getAnimations = () => {
+  const colors = ['#ffffff', '#ddf542', '#884a8c', '#719bbf'];
   let boxShadow = '';
-  let colors = ['#ffffff', '#ddf542', '#884a8c', '#719bbf'];
   let top = 0;
   let left = 0;
   let width = 0;

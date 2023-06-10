@@ -34,7 +34,7 @@ const Index = () => (
                 <RegularText key={i}>{item}</RegularText>
               ))}
             </div>
-            <Link to="/collection">
+            <Link to="/collections">
               <Button customStyles={customButtonStyles} isStartBtn>
                 Начать игру
               </Button>
